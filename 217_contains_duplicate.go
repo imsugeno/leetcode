@@ -1,12 +1,12 @@
 package leetcode
 
 func containsDuplicate(nums []int) bool {
-	freq := make(map[int]int) // key: num, val: count
-	for _, v := range(nums) {
-		freq[v] ++
-		if freq[v] > 1 {
+	seen := make(map[int]bool)
+	for _, v := range nums {
+		if seen[v] {
 			return true
 		}
+		seen[v] = true
 	}
 
 	return false
