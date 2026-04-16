@@ -1,19 +1,19 @@
 package leetcode
 
 func groupAnagrams(strs []string) [][]string {
-	groups := make(map[[26]int][]string)
+	counterToList := make(map[[26]int][]string)
 
-	for _, str := range strs {
-		var key [26]int
-		for _, c := range str {
-			key[c-'a']++
+	for _, str := range(strs) {
+		var counter [26]int
+		for _, s := range(str) {
+			counter[s-'a']++
 		}
-		groups[key] = append(groups[key], str)
+		counterToList[counter] = append(counterToList[counter], str)
 	}
 
-	result := make([][]string, 0, len(groups))
-	for _, group := range groups {
-		result = append(result, group)
+	var result [][]string
+	for _, l := range(counterToList) {
+		result = append(result, l)
 	}
 
 	return result
