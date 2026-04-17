@@ -1,31 +1,24 @@
 package leetcode
 
 func commonChars(words []string) []string {
-	var resultList [26]int
+	var minCount [26]int
+	for _, c := range words[0] {
+		minCount[c-'a']++
+	}
 
-	for i, word := range(words) {
-		var wordList [26]int
-		for _, w := range(word) {
-			if i == 0{
-				resultList[w-'a']++
-			}
-			wordList[w-'a']++
+	for _, word := range words[1:] {
+		var count [26]int
+		for _, c := range word {
+			count[c-'a']++
 		}
-
-		if i == 0 {
-			continue
-		}
-
-		for i := range(26) {
-			if wordList[i] <= resultList[i] {
-				resultList[i] = wordList[i]
-			}
+		for i := range 26 {
+			minCount[i] = min(minCount[i], count[i])
 		}
 	}
 
 	var result []string
-	for i, v := range(resultList) {
-		for range(v) {
+	for i, v := range minCount {
+		for range v {
 			result = append(result, string(rune(i)+'a'))
 		}
 	}
