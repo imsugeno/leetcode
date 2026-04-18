@@ -1,29 +1,26 @@
 package leetcode
 
+import "strings"
+
 func customSortString(order string, s string) string {
-    count := make(map[rune]int) // exp) a:2, b:3
-	var contains [26]int // what alphabets 's' contains
+	var count [26]int
+	for _, c := range s {
+		count[c-'a']++
+	}
 
-    for _, v := range(s) {
-        count[v] ++
-		contains[v-'a'] = 1
-    }
-
-    var result string
-    for _, o := range(order) {
-        for range(count[o]) {
-			result += string(o)
+	var sb strings.Builder
+	for _, c := range order {
+		for range count[c-'a'] {
+			sb.WriteRune(c)
 		}
-		contains[o-'a'] = 0 // pick up
-    }
+		count[c-'a'] = 0
+	}
 
-	for i, c := range(contains) {
-		if c == 1 {
-			for range(count[rune(i)+'a']) {
-				result += string(rune(i)+'a') // add remains
-			}
+	for i, n := range count {
+		for range n {
+			sb.WriteRune(rune(i) + 'a')
 		}
 	}
 
-	return result
+	return sb.String()
 }
