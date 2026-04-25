@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 import (
 	"cmp"
@@ -38,3 +38,5 @@ func mapNumber(mapping []int, n int) int {
 	r, _ := strconv.Atoi(newStr)
 	return r
 }
+
+func main() {}

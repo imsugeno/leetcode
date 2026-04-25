@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func commonChars(words []string) []string {
 	var minCount [26]int
@@ -25,3 +25,5 @@ func commonChars(words []string) []string {
 
 	return result
 }
+
+func main() {}

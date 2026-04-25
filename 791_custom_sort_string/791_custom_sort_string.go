@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 import "strings"
 
@@ -24,3 +24,5 @@ func customSortString(order string, s string) string {
 
 	return sb.String()
 }
+
+func main() {}

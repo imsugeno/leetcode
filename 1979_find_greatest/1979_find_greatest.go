@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 import "slices"
 
@@ -17,3 +17,5 @@ func findGCD(nums []int) int {
 
 	return backtrack(m)
 }
+
+func main() {}

@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func twoSum(nums []int, target int) []int {
 	seen := make(map[int]int) // target-v -> index
@@ -12,3 +12,5 @@ func twoSum(nums []int, target int) []int {
 
 	return []int{}
 }
+
+func main() {}

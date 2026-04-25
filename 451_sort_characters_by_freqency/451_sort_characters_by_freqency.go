@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 import (
 	"cmp"
@@ -29,3 +29,5 @@ func frequencySort(s string) string {
 
 	return sb.String()
 }
+
+func main() {}

@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func numIdenticalPairs(nums []int) int {
 	count := 0
@@ -25,3 +25,5 @@ func numIdenticalPairs2(nums []int) int {
 
 	return count
 }
+
+func main() {}

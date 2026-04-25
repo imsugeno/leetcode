@@ -1,9 +1,9 @@
-package leetcode
+package main
 
-// type ListNode struct {
-// 	Val  int
-// 	Next *ListNode
-// }
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
 
 func getDecimalValue(head *ListNode) int {
 	result := 0
@@ -12,3 +12,5 @@ func getDecimalValue(head *ListNode) int {
 	}
 	return result
 }
+
+func main() {}

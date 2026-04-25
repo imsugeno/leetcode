@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func groupAnagrams(strs []string) [][]string {
 	counterToList := make(map[[26]int][]string)
@@ -18,3 +18,5 @@ func groupAnagrams(strs []string) [][]string {
 
 	return result
 }
+
+func main() {}

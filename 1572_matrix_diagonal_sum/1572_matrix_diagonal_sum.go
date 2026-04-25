@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func diagonalSum(mat [][]int) int {
     // primary diagonalsを抽出
@@ -28,3 +28,5 @@ func diagonalSum(mat [][]int) int {
 	sum -= primary[(len(primary)-1)/2]
 	return sum
 }
+
+func main() {}

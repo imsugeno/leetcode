@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func nextGreatestLetter(letters []byte, target byte) byte {
 	lo, hi := 0, len(letters)
@@ -15,3 +15,5 @@ func nextGreatestLetter(letters []byte, target byte) byte {
 	}
 	return letters[lo]
 }
+
+func main() {}

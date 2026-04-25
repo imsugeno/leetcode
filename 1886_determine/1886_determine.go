@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func findRotation(mat [][]int, target [][]int) bool {
     for range 4 {
@@ -54,3 +54,5 @@ i=0行目 -> 2列目 n(3) - 1 - j(0) = 2
 i=1行目 -> 1列目 n(3) - 1 - j(1) = 1
 i=2行目 -> 0列目 n(3) - 1 - j(2) = 0
 ***/
+
+func main() {}

@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func subsets2(nums []int) [][]int {
 	var result [][]int
