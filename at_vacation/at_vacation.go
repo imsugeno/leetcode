@@ -15,7 +15,7 @@ func main() {
 	n, _ := strconv.Atoi(sc.Text())
 
 	points := make([][]int, n)
-	for i := 0; i <= n; i++ {
+	for i := range n {
 		sc.Scan()
 		pointStr := strings.Split(sc.Text(), " ")
 		buf := make([]int, 3)
@@ -30,8 +30,8 @@ func main() {
 	// j:0 -> i日目は 1or2
 	// j:1 -> i日目は 0or2
 	// j:2 -> i日目は 0or1
-	dp := make([][]int, n)
-	for i := range n {
+	dp := make([][]int, n+1)
+	for i := range n + 1 {
 		dp[i] = []int{0, 0, 0}
 	}
 	for i := range n {
